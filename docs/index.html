@@ -61,6 +61,7 @@
       left: 50%;
       margin-left: -320px;
     }
+    
 
     body {
       background: #f0ece0;
@@ -108,6 +109,35 @@
       color: #4395ff;
       text-decoration: none;
     }
+    @media screen and (max-width: 750px) {
+       .header-bar {
+         width: 100%;
+       }
+       h1{
+         width: 100px;
+       }
+       .title{
+         display: none;
+       }
+       .list {
+        position: fixed;
+        width: 100%;
+        height: 200px;
+        top: 50px;
+        overflow: auto;
+        background: #fff;
+        border-bottom: 1px solid #eee;
+       }
+       .tools{
+         position: fixed;
+         width: 100%;
+         top: 251px;
+         bottom: 0px;
+         left: 0px;
+         margin-left: 0px;
+       }
+    }
+
   </style>
   <script>
 
@@ -128,7 +158,7 @@
   <header>
     <div class="header-bar">
       <h1>
-        <img src="./the.png" class="logo">高频单词学习法</h1>
+        <img src="./the.png" class="logo"><span class="title">高频单词学习法</span></h1>
       <div>
         <a class="link" target="_blank" href="http://www.cgdict.com/">词根字典</a>
         <a class="link" target="_blank" href="help.html">常见词性</a>
