@@ -23,12 +23,10 @@
       overflow: auto;
     }
 
-    h1 {
+    header {
       height: 48px;
       line-height: 48px;
       border-bottom: 2px solid #4395ff;
-      text-align: center;
-      color: #4395ff;
       position: fixed;
       top: 0;
       left: 0;
@@ -37,6 +35,20 @@
       font-size: 20px;
       font-weight: normal;
       background: #fff;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin: 0;
+      width: 200px;
+    }
+
+    .header-bar {
+      height: 48px;
+      width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
     }
 
     .tools {
@@ -72,12 +84,20 @@
       background: #4395ff;
       color: #fff;
       font-weight: 400;
-      
+
     }
 
     .frequency {
       font-size: 13px;
       display: inline-block;
+    }
+
+    .link {
+      font-size: 16px;
+      display: inline-block;
+      margin: 0 10px;
+      color: #4395ff;
+      text-decoration: none;
     }
   </style>
   <script>
@@ -85,7 +105,7 @@
     function query(word, element) {
       // document.querySelector(".word").each(node=>node.className = 'word');
       element.className = 'word active';
-      if(prev){
+      if (prev) {
         prev.className = 'word';
       }
       prev = element;
@@ -96,7 +116,15 @@
 </head>
 
 <body>
-  <h1>高频单词学习法 <a class="help" target="_blank" href="help.html">帮助</a></h1>
+  <header>
+    <div class="header-bar">
+      <h1>高频单词学习法</h1>
+      <div>
+        <a class="link" target="_blank" href="http://www.cgdict.com/">词根字典</a>
+        <a class="link" target="_blank" href="help.html">常见词性</a>
+      </div>
+    </div>
+  </header>
   <div class="main">
     <div class="list">
       {{words}}
